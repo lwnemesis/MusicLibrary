@@ -9,6 +9,65 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <RelativePanel Grid.Row="0">
+            <Button Name="HamburgerButton"
+                    Click="HamburgerButton_Click"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE700;"
+                    Height="45"
+                    Width="45"
+                    />
+            <Button Name="BackButton"
+                    Click="BackButton_Click"
+                    RelativePanel.RightOf="HamburgerButton"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE0A6;"
+                    Height="45"
+                    Width="45"
+                    />
+        </RelativePanel>
+        <SplitView Grid.Row="1" Name="ContentSplitView"
+                   DisplayMode="CompactOverlay"
+                   CompactPaneLength="45"
+                   OpenPaneLength="200"
+                   >
+            <SplitView.Pane>
+                <ListView>
+
+                </ListView>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Name="CategoryTextBlock" 
+                               Text="All Sounds" FontSize="24" />
+                    <GridView Grid.Row="1" 
+                              Name="SoundGridView"
+                              IsItemClickEnabled="True"
+                              ItemClick="SoundGridView_ItemClick">
+                        <GridView.ItemTemplate>
+                            <DataTemplate >
+                                <Image Height="112" Width="101" Source="{x:Bind ImageFile}" />
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+
+                    </GridView>
+                    <MediaElement Name="SoundMedia" AutoPlay="True" />
+                </Grid>
+            </SplitView.Content>
+
+        </SplitView>
+
+
 
     </Grid>
 </Page>
