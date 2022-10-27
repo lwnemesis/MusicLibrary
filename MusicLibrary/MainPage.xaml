@@ -9,6 +9,32 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel Grid.Row="0">
+            
+        </RelativePanel>
+        <SplitView Grid.Row="1" Name="ContentSplitView"
+                   DisplayMode="CompactOverlay"
+                   CompactPaneLength="45"
+                   OpenPaneLength="200">
+            <SplitView.Pane>
+                <ListView>
+                    
+                </ListView>
+            </SplitView.Pane>
 
+            <SplitView.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Name="CategoryTextBlock" Text="Music" FontSize="24"></TextBlock>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
     </Grid>
 </Page>
