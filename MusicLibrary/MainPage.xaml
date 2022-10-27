@@ -14,7 +14,21 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <RelativePanel Grid.Row="0">
-            
+            <Button Name="HamburgerButton"
+                    Click="HamburgerButton_Click"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE700;"
+                    Height="45"
+                    Width="45"
+                    />
+            <Button Name="BackButton"
+                    Click="BackButton_Click"
+                    RelativePanel.RightOf="HamburgerButton"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE0A6;"
+                    Height="45"
+                    Width="45"
+                    />
         </RelativePanel>
         <SplitView Grid.Row="1" Name="ContentSplitView"
                    DisplayMode="CompactOverlay"
