@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MusicLibrary.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +24,25 @@ namespace MusicLibrary
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private ObservableCollection<Music> musics;
         public MainPage()
         {
             this.InitializeComponent();
+            musics = new ObservableCollection<Music>();
+            MusicManager.getALLMusic(musics);
+        }
+        private void HamburgerButton_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void BackButton_Click( object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void MusicGridview_ItemClick(object sender,ItemClickEventArgs e)
+        {
+            var music = (Music)e.ClickedItem;
+            MusciMedia.Source = new Uri(this.BaseUri, music.AudioFile);
         }
     }
 }
