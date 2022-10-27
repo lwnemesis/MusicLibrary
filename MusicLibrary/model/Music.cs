@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace MusicLibrary.model
 {
     internal enum MusicCategory
-    { Pop,
+    {
+        Pop,
         Classic,
         Rap,
         Rock
