@@ -42,7 +42,7 @@ namespace MusicLibrary
         private void MusicGridview_ItemClick(object sender,ItemClickEventArgs e)
         {
             var music = (Music)e.ClickedItem;
-            MusciMedia.Source = new Uri(this.BaseUri, music.AudioFile);
+            //MusicMedia.Source = new Uri(this.BaseUri, music.AudioFile);
         }
     }
 }

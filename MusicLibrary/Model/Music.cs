@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicLibrary.model
+namespace MusicLibrary.Model
 {
     internal enum MusicCategory
     {

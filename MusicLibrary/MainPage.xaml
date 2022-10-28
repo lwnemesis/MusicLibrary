@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <RelativePanel Grid.Row="0">
             <Button Name="HamburgerButton"
-                    Click="HamburgerButton_Click"
+                    Click="HamburgerButton_click"
                     FontFamily="Segoe MDL2 Assets"
                     Content="&#xE700;"
                     Height="45"
