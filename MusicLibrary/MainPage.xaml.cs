@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace MusicLibrary
@@ -24,12 +25,13 @@ namespace MusicLibrary
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private ObservableCollection<Music> musics;
+        private ObservableCollection<Music> songs;
+
         public MainPage()
         {
             this.InitializeComponent();
-            musics = new ObservableCollection<Music>();
-            MusicManager.getALLMusic(musics);
+            songs = new ObservableCollection<Music>();
+            MusicManager.getALLMusic(songs);
         }
         private void HamburgerButton_click(object sender, RoutedEventArgs e)
         {
@@ -42,7 +44,7 @@ namespace MusicLibrary
         private void MusicGridview_ItemClick(object sender,ItemClickEventArgs e)
         {
             var music = (Music)e.ClickedItem;
-            //MusicMedia.Source = new Uri(this.BaseUri, music.AudioFile);
+            MusicMedia.Source = new Uri(this.BaseUri, music.AudioFile);
         }
     }
 }
