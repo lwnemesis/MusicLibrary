@@ -37,10 +37,9 @@
                    OpenPaneLength="200">
             <SplitView.Pane>
                 <ListView>
-                    
+
                 </ListView>
             </SplitView.Pane>
-
             <SplitView.Content>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -52,17 +51,21 @@
                               Name="SoundGridView"
                               IsItemClickEnabled="True"
                               ItemsSource="{x:Bind songs}"
-                              ItemClick="MusicGridview_ItemClick">
+                              ItemClick="MusicGridview_ItemClick"
+                              >
                         <GridView.ItemTemplate>
-                            <DataTemplate x:DataType="data:Music">
-                                <Image Height="112" Width="101" Source="{x:Bind ImageFile}" />
+                            <DataTemplate x:DataType="data:Music" >
+                                <StackPanel>
+                                    <Image Height="112" Width="101" Source="{x:Bind ImageFile}" />
+                                    <TextBlock Name="SongTitle" Text="{x:Bind Name}" HorizontalAlignment="Center"></TextBlock>
+                                </StackPanel>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
                     <MediaElement Name="MusicMedia" AutoPlay="True" />
-                </Grid>                
+                </Grid>
             </SplitView.Content>
         </SplitView>
-      
+
     </Grid>
 </Page>
