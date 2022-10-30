@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:data="using:MusicLibrary.Model"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
@@ -36,19 +37,35 @@
                    OpenPaneLength="200">
             <SplitView.Pane>
                 <ListView>
-                    
+
                 </ListView>
             </SplitView.Pane>
-
             <SplitView.Content>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Name="CategoryTextBlock" Text="Music" FontSize="24"></TextBlock>
+                    <TextBlock Grid.Row="0" Name="CategoryTextBlock" Text="All Songs" FontSize="24"></TextBlock>
+                    <GridView Grid.Row="1" 
+                              Name="SoundGridView"
+                              IsItemClickEnabled="True"
+                              ItemsSource="{x:Bind songs}"
+                              ItemClick="MusicGridview_ItemClick"
+                              >
+                        <GridView.ItemTemplate>
+                            <DataTemplate x:DataType="data:Music" >
+                                <StackPanel>
+                                    <Image Height="112" Width="101" Source="{x:Bind ImageFile}" />
+                                    <TextBlock Name="SongTitle" Text="{x:Bind Name}" HorizontalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+                    <MediaElement Name="MusicMedia" AutoPlay="True" />
                 </Grid>
             </SplitView.Content>
         </SplitView>
+
     </Grid>
 </Page>

@@ -124,6 +124,12 @@
     </Compile>
     <Compile Include="Model\Music.cs" />
     <Compile Include="Model\MusicManager.cs" />
+    <Compile Include="obj\x64\Debug\.NETCore,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\x64\Debug\App.g.cs" />
+    <Compile Include="obj\x64\Debug\App.g.i.cs" />
+    <Compile Include="obj\x64\Debug\MainPage.g.cs" />
+    <Compile Include="obj\x64\Debug\MainPage.g.i.cs" />
+    <Compile Include="obj\x64\Debug\XamlTypeInfo.g.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +138,33 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Audio\Classic\blessed.mp3" />
+    <Content Include="Assets\Audio\Classic\midnight.mp3" />
+    <Content Include="Assets\Audio\Classic\nature.mp3" />
+    <Content Include="Assets\Audio\Pop\sunshine.mp3" />
+    <Content Include="Assets\Audio\Pop\whip.mp3" />
+    <Content Include="Assets\Audio\Rap\bounce.mp3" />
+    <Content Include="Assets\Audio\Rap\snoozing.mp3" />
+    <Content Include="Assets\Audio\Rock\powerful.mp3" />
+    <Content Include="Assets\Audio\Rock\stomping.mp3" />
+    <Content Include="Assets\Audio\Rock\torn.mp3" />
+    <Content Include="Assets\Icons\Classic.png" />
+    <Content Include="Assets\Icons\folder.png" />
+    <Content Include="Assets\Icons\Pop.png" />
+    <Content Include="Assets\Icons\Rap.png" />
+    <Content Include="Assets\Icons\Rock.png" />
+    <Content Include="Assets\Images\Classic\blessed.png" />
+    <Content Include="Assets\Images\Classic\midnight.png" />
+    <Content Include="Assets\Images\Classic\nature.png" />
+    <Content Include="Assets\Images\Pop\sunshine.png" />
+    <Content Include="Assets\Images\Pop\whip.png" />
+    <Content Include="Assets\Images\Rap\Bounce.png" />
+    <Content Include="Assets\Images\Rap\snoozing.png" />
+    <Content Include="Assets\Images\Rock\powerful.png" />
+    <Content Include="Assets\Images\Rock\stomping.png" />
+    <Content Include="Assets\Images\Rock\torn.png" />
+    <Content Include="bin\x64\Debug\MusicLibrary.exe" />
+    <Content Include="bin\x64\Debug\MusicLibrary.pdb" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -156,17 +189,7 @@
       <Version>6.2.14</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Icons\" />
-    <Folder Include="Assets\Images\Classical\" />
-    <Folder Include="Assets\Images\Pop\" />
-    <Folder Include="Assets\Images\Rap\" />
-    <Folder Include="Assets\Images\Rock\" />
-    <Folder Include="Assets\Music\Classical\" />
-    <Folder Include="Assets\Music\Pop\" />
-    <Folder Include="Assets\Music\Rap\" />
-    <Folder Include="Assets\Music\Rock\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
