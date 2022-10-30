@@ -124,6 +124,12 @@
     </Compile>
     <Compile Include="Model\Music.cs" />
     <Compile Include="Model\MusicManager.cs" />
+    <Compile Include="obj\x64\Debug\.NETCore,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\x64\Debug\App.g.cs" />
+    <Compile Include="obj\x64\Debug\App.g.i.cs" />
+    <Compile Include="obj\x64\Debug\MainPage.g.cs" />
+    <Compile Include="obj\x64\Debug\MainPage.g.i.cs" />
+    <Compile Include="obj\x64\Debug\XamlTypeInfo.g.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +163,8 @@
     <Content Include="Assets\Images\Rock\powerful.png" />
     <Content Include="Assets\Images\Rock\stomping.png" />
     <Content Include="Assets\Images\Rock\torn.png" />
+    <Content Include="bin\x64\Debug\MusicLibrary.exe" />
+    <Content Include="bin\x64\Debug\MusicLibrary.pdb" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
