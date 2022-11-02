@@ -36,7 +36,19 @@
                    CompactPaneLength="45"
                    OpenPaneLength="200">
             <SplitView.Pane>
-                <ListView>
+                <ListView
+                          Name="MenuItemsListView"
+                          IsItemClickEnabled="True"
+                          ItemsSource="{x:Bind menuItems}"
+                          ItemClick="MenuItemsListView_ItemClick">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="data:MenuItem">
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Image Source="{x:Bind IconFile}" Height="45" Width="45" Margin="-10,0,0,0" />
+                                <TextBlock Text="{x:Bind Category}" FontSize="18" Margin="10,10,0,0" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
 
                 </ListView>
             </SplitView.Pane>
