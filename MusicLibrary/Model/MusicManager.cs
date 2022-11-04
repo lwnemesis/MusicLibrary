@@ -10,7 +10,6 @@ namespace MusicLibrary.Model
 {
     internal static class MusicManager
     {
-        public static DataTable SongDetail = new DataTable();
 
         public static void getALLMusic(ObservableCollection<Music> Songs)
         {
@@ -31,8 +30,8 @@ namespace MusicLibrary.Model
         {
             List<Music> Songs = new List<Music>();
 
-            SongDetail = GetSongDetails();
-            foreach (DataRow dr in SongDetail.Rows)
+            DataTable AllSongDetail = GetSongDetails();
+            foreach (DataRow dr in AllSongDetail.Rows)
             {
                 Songs.Add(new Music(dr));
             }
@@ -41,6 +40,8 @@ namespace MusicLibrary.Model
 
         public static DataTable GetSongDetails()
         {
+            DataTable SongDetail = new DataTable();
+
             SongDetail.Columns.Add("SongID", typeof(int));
             SongDetail.Columns.Add("Name", typeof(string));
             SongDetail.Columns.Add("Artist", typeof(string));
