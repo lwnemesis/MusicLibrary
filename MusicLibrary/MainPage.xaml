@@ -41,14 +41,15 @@
                 </ListView>
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid>
+                <Grid >
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
                         <RowDefinition Height="*"/>
+                        <RowDefinition Height="250"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Name="CategoryTextBlock" Text="All Songs" FontSize="24"></TextBlock>
                     <GridView Grid.Row="1" 
-                              Name="SoundGridView"
+                              Name="MusicGridview"
                               IsItemClickEnabled="True"
                               ItemsSource="{x:Bind songs}"
                               ItemClick="MusicGridview_ItemClick"
@@ -57,12 +58,51 @@
                             <DataTemplate x:DataType="data:Music" >
                                 <StackPanel>
                                     <Image Height="112" Width="101" Source="{x:Bind ImageFile}" />
-                                    <TextBlock Name="SongTitle" Text="{x:Bind Name}" HorizontalAlignment="Center"></TextBlock>
+                                    <TextBlock Name="SongTitleinGrid" Text="{x:Bind Name}" HorizontalAlignment="Center"></TextBlock>
                                 </StackPanel>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
                     <MediaElement Name="MusicMedia" AutoPlay="True" />
+                    <Grid Grid.Row="2" Name="PlayerConsoleGrid" Visibility="Collapsed">
+                        <Border BorderBrush="#919191" BorderThickness="2" >
+                        </Border>
+                        <StackPanel Orientation="vertical" Grid.Row="0" Margin="10" Padding="20">
+                            <TextBlock Foreground="#26867c" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left">Currently Playing:</TextBlock>
+                            <StackPanel Orientation="Horizontal" >
+                                <StackPanel Width="200">
+                                    <Image Name="PlayingSongImage"  Height="112" Width="101" Margin="0,20,0,0"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="10">
+                                        <TextBlock Foreground="Black" FontSize="18" FontWeight="Bold" Width="60">Title:</TextBlock>
+                                        <TextBlock Name="SongTitleTextBox" Foreground="#0d2e2b"  FontSize="18" Width="150" HorizontalAlignment="left" VerticalAlignment="Center"></TextBlock>
+                                        <TextBlock Foreground="Black" FontSize="18" FontWeight="Bold" Width="70">Album:</TextBlock>
+                                        <TextBlock Name="AlbumTextBox" Foreground="#0d2e2b" FontSize="18" Width="150" HorizontalAlignment="left" VerticalAlignment="Center"></TextBlock>
+                                        <TextBlock Foreground="Black" FontSize="18" FontWeight="Bold" Width="60">Artist:</TextBlock>
+                                        <TextBlock Name="ArtisttextBox" Foreground="#0d2e2b" FontSize="18" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="10">
+                                        <TextBlock Foreground="Black" FontSize="18" FontWeight="Bold" Width="60">Year:</TextBlock>
+                                        <TextBlock Name="YearTextBox" Foreground="#0d2e2b" FontSize="18" Width="150" HorizontalAlignment="left" VerticalAlignment="Center"></TextBlock>
+                                        <TextBlock Foreground="Black" FontSize="18" FontWeight="Bold" Width="70">genere:</TextBlock>
+                                        <TextBlock Name="GenereTextBox" Foreground="#0d2e2b" FontSize="18" Width="150" HorizontalAlignment="left" VerticalAlignment="Center"></TextBlock>
+                                        <TextBlock Foreground="Black" FontSize="18" FontWeight="Bold" Width="100">Duration:</TextBlock>
+                                        <TextBlock Name="DurationTextBox" Foreground="#0d2e2b" FontSize="18" Width="150" HorizontalAlignment="left" VerticalAlignment="Center"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="10,20" >
+                                        <TextBlock Foreground="Black" FontSize="18" FontWeight="Bold" Width="70">Volume:</TextBlock>
+                                        <Slider Name="VolumeSlider"  TickPlacement="BottomRight" Maximum="10" Margin="20,0" TickFrequency="5" Width="150" 
+                                        ValueChanged="volumeSlider_ValueChanged"/>
+                                        <Button Name="MuteButton" Click="MuteButton_Click" FontFamily="Segoe MDL2 Assets" Content="&#xE74F;" ToolTipService.ToolTip="Mute" Margin="5,0,30,0"/>
+                                        <Button Name="btnPlay" Margin="20,0,0,0"  Click="btnPlay_Click">Play</Button>
+                                        <Button Name="btnPause" Margin="5,0" Click="btnPause_Click">Pause</Button>
+                                        <Button Name="btnStop" Click="btnStop_Click">Stop</Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
                 </Grid>
             </SplitView.Content>
         </SplitView>
