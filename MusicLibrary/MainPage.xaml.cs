@@ -26,25 +26,58 @@ namespace MusicLibrary
     public sealed partial class MainPage : Page
     {
         private ObservableCollection<Music> songs;
+        private List<MenuItem> menuItems;
 
         public MainPage()
         {
             this.InitializeComponent();
             songs = new ObservableCollection<Music>();
             MusicManager.getALLMusic(songs);
+            menuItems = new List<MenuItem>();
+            menuItems.Add(new MenuItem
+            {
+                IconFile = "Assets/Icons/Classic.png",
+                Category = MusicCategory.Classic
+            });
+            menuItems.Add(new MenuItem
+            {
+                IconFile = "Assets/Icons/Pop.png",
+                Category = MusicCategory.Pop
+            });
+            menuItems.Add(new MenuItem
+            {
+                IconFile = "Assets/Icons/Rap.png",
+                Category = MusicCategory.Rap
+            });
+            menuItems.Add(new MenuItem
+            {
+                IconFile = "Assets/Icons/Rock.png",
+                Category = MusicCategory.Rock
+            });
+            BackButton.Visibility = Visibility.Collapsed;
         }
         private void HamburgerButton_click(object sender, RoutedEventArgs e)
         {
-
+            ContentSplitView.IsPaneOpen = !ContentSplitView.IsPaneOpen;
         }
         private void BackButton_Click( object sender, RoutedEventArgs e)
         {
-
+            MusicManager.getALLMusic(songs);
+            CategoryTextBlock.Text = "All songs";
+            BackButton.Visibility = Visibility.Collapsed;
+            MenuItemsListView.SelectedItem = null;
         }
         private void MusicGridview_ItemClick(object sender,ItemClickEventArgs e)
         {
             var music = (Music)e.ClickedItem;
             MusicMedia.Source = new Uri(this.BaseUri, music.AudioFile);
+        }
+        private void MenuItemsListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var menuItem = (MenuItem)e.ClickedItem;
+            CategoryTextBlock.Text = menuItem.Category.ToString();
+            MusicManager.getMusicByCategory(songs, menuItem.Category);
+            BackButton.Visibility = Visibility.Visible;
         }
     }
 }
