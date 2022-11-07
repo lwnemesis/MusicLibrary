@@ -82,7 +82,7 @@
                             <StackPanel Orientation="Horizontal" >
                                 <StackPanel Width="200" Orientation="Vertical">
                                     <Image Name="PlayingSongImage"  Height="112" Width="101" Margin="0,20,0,0" HorizontalAlignment="Center"/>
-                                    <HyperlinkButton Name="EditCoverImageButton" Content="Edit Cover Image" HorizontalAlignment="Center" Click="EditCoverImageButton_Click"></HyperlinkButton>
+                                    <HyperlinkButton Name="EditCoverImageButton" Content="Try a new Cover Image" HorizontalAlignment="Center" Click="EditCoverImageButton_Click"></HyperlinkButton>
                                 </StackPanel>
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal" Margin="10">

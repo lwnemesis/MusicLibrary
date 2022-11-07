@@ -49,19 +49,19 @@ namespace MusicLibrary.Model
             SongDetail.Columns.Add("Album", typeof(string));
             SongDetail.Columns.Add("Category", typeof(string));
 
-            SongDetail.Rows.Add(1, "blessed", "Adelle", "2004", "Love", MusicCategory.Classic);
+            SongDetail.Rows.Add(1, "blessed", "Adele", "2004", "Love", MusicCategory.Classic);
             SongDetail.Rows.Add(2, "midnight", "Shawn", "2009", "Twilight", MusicCategory.Classic);
             SongDetail.Rows.Add(3, "nature", "Katy Perry", "2004", "Roar", MusicCategory.Classic);
 
-            SongDetail.Rows.Add(4, "sunshine", "Lady gaga ", "2017", "A star is born", MusicCategory.Pop);
+            SongDetail.Rows.Add(4, "sunshine", "Lady gaga", "2017", "A star is born", MusicCategory.Pop);
             SongDetail.Rows.Add(5, "whip", "Sia", "2017", "Cheap thrills", MusicCategory.Pop);
 
-            SongDetail.Rows.Add(6, "bounce", "Tylor Swift", "2020", "Fashion", MusicCategory.Rap);
-            SongDetail.Rows.Add(7, "snoozing", "Adelle", "2004", "Breath", MusicCategory.Rap);
+            SongDetail.Rows.Add(6, "bounce", "Taylor Swift", "2020", "Fashion", MusicCategory.Rap);
+            SongDetail.Rows.Add(7, "snoozing", "Adele", "2004", "Breath", MusicCategory.Rap);
 
             SongDetail.Rows.Add(8, "Powerful", "Rihanna", "2010", "Diamonds", MusicCategory.Rock);
-            SongDetail.Rows.Add(9, "stomping", "Dua Lipa", "2020", "Nostaolgia", MusicCategory.Rock);
-            SongDetail.Rows.Add(10, "torn", "Ed Shareen", "2019", "Perfect", MusicCategory.Rock);
+            SongDetail.Rows.Add(9, "stomping", "Dua Lipa", "2020", "Nostalgia", MusicCategory.Rock);
+            SongDetail.Rows.Add(10, "torn", "Ed Sheeran", "2019", "Perfect", MusicCategory.Rock);
 
             return SongDetail;
         }
