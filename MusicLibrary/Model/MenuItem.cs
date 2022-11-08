@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicLibrary.Model
 {
-    internal class  MenuItem
-
+    internal class MenuItem
     {
         public string IconFile { get; set; }
         public MusicCategory Category { get; set; }
