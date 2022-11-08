@@ -86,7 +86,7 @@ namespace MusicLibrary
             MusicMedia.Source = new Uri(this.BaseUri, music.AudioFile);
             SongTitleTextBox.Text = music.Name;
             GenereTextBox.Text = music.Category.ToString();
-            DurationTextBox.Text = string.Format("{0}:{1:00}", Math.Truncate(MusicMedia.NaturalDuration.TimeSpan.TotalMinutes), MusicMedia.NaturalDuration.TimeSpan.Seconds);
+           // DurationTextBox.Text = string.Format("{0}:{1:00}", Math.Truncate(MusicMedia.NaturalDuration.TimeSpan.TotalMinutes), MusicMedia.NaturalDuration.TimeSpan.Seconds);
             VolumeSlider.Value = MusicMedia.Volume;
             ArtisttextBox.Text = music.Artist;
             YearTextBox.Text = music.Year;
@@ -161,6 +161,12 @@ namespace MusicLibrary
             CategoryTextBlock.Text = menuItem.Category.ToString();
             MusicManager.getMusicByCategory(songs, menuItem.Category);
             BackButton.Visibility = Visibility.Visible;
+        }
+
+        private void MusicMedia_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            DurationTextBox.Text = string.Format("{0}:{1:00}", Math.Truncate(MusicMedia.NaturalDuration.TimeSpan.TotalMinutes), MusicMedia.NaturalDuration.TimeSpan.Seconds);
+
         }
     }
 }
