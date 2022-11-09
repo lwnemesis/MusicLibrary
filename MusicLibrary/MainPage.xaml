@@ -73,7 +73,7 @@
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
-                    <MediaElement Name="MusicMedia" AutoPlay="True" />
+                    <MediaElement Name="MusicMedia" AutoPlay="True" MediaOpened="MusicMedia_MediaOpened" />
                     <Grid Grid.Row="2" Name="PlayerConsoleGrid" Visibility="Collapsed">
                         <Border BorderBrush="#919191" BorderThickness="2" >
                         </Border>
