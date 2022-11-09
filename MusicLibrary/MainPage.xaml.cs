@@ -25,6 +25,137 @@ namespace MusicLibrary
         public MainPage()
         {
             this.InitializeComponent();
+<<<<<<< Updated upstream
+=======
+            songs = new ObservableCollection<Music>();
+            MusicManager.getALLMusic(songs);
+
+            menuItems = new List<MenuItem>();
+            menuItems.Add(new MenuItem
+            {
+                IconFile = "Assets/Icons/Classic.png",
+                Category = MusicCategory.Classic
+            });
+            menuItems.Add(new MenuItem
+            {
+                IconFile = "Assets/Icons/Pop.png",
+                Category = MusicCategory.Pop
+            });
+            menuItems.Add(new MenuItem
+            {
+                IconFile = "Assets/Icons/Rap.png",
+                Category = MusicCategory.Rap
+            });
+            menuItems.Add(new MenuItem
+            {
+                IconFile = "Assets/Icons/Rock.png",
+                Category = MusicCategory.Rock
+            });
+
+            BackButton.Visibility = Visibility.Collapsed;
+        }
+        private void HamburgerButton_click(object sender, RoutedEventArgs e)
+        {
+            ContentSplitView.IsPaneOpen = !ContentSplitView.IsPaneOpen;
+        }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            CollapsePlayerConsole();
+            MusicManager.getALLMusic(songs);
+            CategoryTextBlock.Text = "All Songs";
+            BackButton.Visibility = Visibility.Collapsed;
+            MenuItemsListView.SelectedItem = null;
+
+        }
+        private void MusicGridview_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            PlayerConsoleGrid.Visibility = Visibility.Visible;
+            var music = (Music)e.ClickedItem;
+            MusicMedia.Source = new Uri(this.BaseUri, music.AudioFile);
+            SongTitleTextBox.Text = music.Name;
+            GenreTextBox.Text = music.Category.ToString();
+           // DurationTextBox.Text = string.Format("{0}:{1:00}", Math.Truncate(MusicMedia.NaturalDuration.TimeSpan.TotalMinutes), MusicMedia.NaturalDuration.TimeSpan.Seconds);
+            VolumeSlider.Value = MusicMedia.Volume;
+            ArtisttextBox.Text = music.Artist;
+            YearTextBox.Text = music.Year;
+            AlbumTextBox.Text = music.Album;
+
+            PlayingSongImage.Source = new BitmapImage(new Uri(this.BaseUri, music.ImageFile));
+        }
+
+        private void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            MusicMedia.Pause();
+        }
+
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            MusicMedia.Play();
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            CollapsePlayerConsole();
+        }
+
+        public void CollapsePlayerConsole()
+        {
+            MusicMedia.Stop();
+            PlayerConsoleGrid.Visibility = Visibility.Collapsed;
+            MusicGridview.SelectedItem = null;
+        }
+
+        private void volumeSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            MusicMedia.Volume = VolumeSlider.Value;
+        }
+
+        private void MuteButton_Click(object sender, RoutedEventArgs e)
+        {
+            MusicMedia.IsMuted = !MusicMedia.IsMuted;
+            var testclor = MuteButton.Background;
+            MuteButton.Background = MusicMedia.IsMuted ? new SolidColorBrush(Colors.Red) : new SolidColorBrush(Colors.LightGray);
+        }
+
+        private async void EditCoverImageButton_Click(object sender, RoutedEventArgs e)
+        {
+            FileOpenPicker openPicker = new FileOpenPicker();
+            openPicker.ViewMode = PickerViewMode.Thumbnail;
+            openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            openPicker.FileTypeFilter.Add(".png");
+            openPicker.CommitButtonText = "Select";
+
+
+            // Open FileOpenPicker    
+            StorageFile file = await openPicker.PickSingleFileAsync();
+            if (file != null)
+            {
+                Windows.Storage.Streams.IRandomAccessStream fileStream =
+                await file.OpenAsync(FileAccessMode.Read);
+
+                // Create a BitmapImage and Set stream as source    
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.SetSource(fileStream);
+
+                PlayingSongImage.Source = bitmapImage;
+            }
+        }
+
+       
+
+        private void MenuItemsListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var menuItem = (MenuItem)e.ClickedItem;
+            CategoryTextBlock.Text = menuItem.Category.ToString();
+            MusicManager.getMusicByCategory(songs, menuItem.Category);
+            BackButton.Visibility = Visibility.Visible;
+        }
+
+        private void MusicMedia_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            DurationTextBox.Text = string.Format("{0}:{1:00}", Math.Truncate(MusicMedia.NaturalDuration.TimeSpan.TotalMinutes), MusicMedia.NaturalDuration.TimeSpan.Seconds);
+
+>>>>>>> Stashed changes
         }
     }
 }

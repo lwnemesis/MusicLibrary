@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>GAMEPC</Machine>
+    <WindowsUser>sergey</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>a0c723e0-835e-4c1f-8ead-b49bd891906e</PackageIdentityName>
+    <PackageIdentityPublisher>CN=sergey</PackageIdentityPublisher>
+    <IntermediateOutputPath>F:\Cohort\MusicLibrary\MusicLibrary\obj\x64\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>F:\Cohort\MusicLibrary\MusicLibrary\bin\x64\Debug\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="F:\Cohort\MusicLibrary\MusicLibrary\bin\x64\Debug\Core\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\bin\x64\Debug\MusicLibrary.exe">
+      <PackagePath>entrypoint\MusicLibrary.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
+      <PackagePath>System.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+      <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Classic\blessed.mp3">
+      <PackagePath>Assets\Audio\Classic\blessed.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Classic\midnight.mp3">
+      <PackagePath>Assets\Audio\Classic\midnight.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Classic\nature.mp3">
+      <PackagePath>Assets\Audio\Classic\nature.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Pop\sunshine.mp3">
+      <PackagePath>Assets\Audio\Pop\sunshine.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Pop\whip.mp3">
+      <PackagePath>Assets\Audio\Pop\whip.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Rap\bounce.mp3">
+      <PackagePath>Assets\Audio\Rap\bounce.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Rap\snoozing.mp3">
+      <PackagePath>Assets\Audio\Rap\snoozing.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Rock\powerful.mp3">
+      <PackagePath>Assets\Audio\Rock\powerful.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Rock\stomping.mp3">
+      <PackagePath>Assets\Audio\Rock\stomping.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Audio\Rock\torn.mp3">
+      <PackagePath>Assets\Audio\Rock\torn.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Icons\Classic.png">
+      <PackagePath>Assets\Icons\Classic.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Icons\folder.png">
+      <PackagePath>Assets\Icons\folder.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Icons\Pop.png">
+      <PackagePath>Assets\Icons\Pop.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Icons\Rap.png">
+      <PackagePath>Assets\Icons\Rap.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Icons\Rock.png">
+      <PackagePath>Assets\Icons\Rock.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Classic\blessed.png">
+      <PackagePath>Assets\Images\Classic\blessed.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Classic\midnight.png">
+      <PackagePath>Assets\Images\Classic\midnight.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Classic\nature.png">
+      <PackagePath>Assets\Images\Classic\nature.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Pop\sunshine.png">
+      <PackagePath>Assets\Images\Pop\sunshine.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Pop\whip.png">
+      <PackagePath>Assets\Images\Pop\whip.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Rap\Bounce.png">
+      <PackagePath>Assets\Images\Rap\Bounce.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Rap\snoozing.png">
+      <PackagePath>Assets\Images\Rap\snoozing.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Rock\powerful.png">
+      <PackagePath>Assets\Images\Rock\powerful.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Rock\stomping.png">
+      <PackagePath>Assets\Images\Rock\stomping.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Images\Rock\torn.png">
+      <PackagePath>Assets\Images\Rock\torn.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\bin\x64\Debug\MusicLibrary.xr.xml">
+      <PackagePath>MusicLibrary.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\bin\x64\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\bin\x64\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
+      <PackagePath>WinMetadata\Windows.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\bin\x64\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Cohort\MusicLibrary\MusicLibrary\bin\x64\Debug\Core\MusicLibrary.exe">
+      <PackagePath>MusicLibrary.exe</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.31331.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.31331.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.31331.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.31331.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.31331.1</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.31331.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.31327.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.31327.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.31327.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.31327.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.31327.1</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.31327.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.30704.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30704.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.30704.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30704.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.30704.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30704.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.30704.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30704.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
