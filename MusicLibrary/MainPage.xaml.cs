@@ -87,7 +87,7 @@ namespace MusicLibrary
             SongTitleTextBox.Text = music.Name;
             GenereTextBox.Text = music.Category.ToString();
            // DurationTextBox.Text = string.Format("{0}:{1:00}", Math.Truncate(MusicMedia.NaturalDuration.TimeSpan.TotalMinutes), MusicMedia.NaturalDuration.TimeSpan.Seconds);
-            VolumeSlider.Value = MusicMedia.Volume;
+            //VolumeSlider.Value = MusicMedia.Volume;
             ArtisttextBox.Text = music.Artist;
             YearTextBox.Text = music.Year;
             AlbumTextBox.Text = music.Album;
@@ -166,7 +166,7 @@ namespace MusicLibrary
         private void MusicMedia_MediaOpened(object sender, RoutedEventArgs e)
         {
             DurationTextBox.Text = string.Format("{0}:{1:00}", Math.Truncate(MusicMedia.NaturalDuration.TimeSpan.TotalMinutes), MusicMedia.NaturalDuration.TimeSpan.Seconds);
-
+            VolumeSlider.Value = MusicMedia.Volume;
         }
     }
 }

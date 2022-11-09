@@ -24,13 +24,13 @@ namespace MusicLibrary.Model
         public string Album { get; set; }
         public MusicCategory Category { get; set; }
 
-        public Music(DataRow dr)
+        public Music(DataRow MusicDataRow)
         {
-            Name = dr["Name"].ToString();
-            Category = (MusicCategory)Enum.Parse(typeof(MusicCategory), dr["Category"].ToString());
-            Artist = dr["Artist"].ToString();
-            Year = dr["Year"].ToString();
-            Album = dr["Album"].ToString();
+            Name = MusicDataRow["Name"].ToString();
+            Category = (MusicCategory)Enum.Parse(typeof(MusicCategory), MusicDataRow["Category"].ToString());
+            Artist = MusicDataRow["Artist"].ToString();
+            Year = MusicDataRow["Year"].ToString();
+            Album = MusicDataRow["Album"].ToString();
             AudioFile = $"/Assets/Audio/{Category}/{Name}.mp3";
             ImageFile = $"/Assets/Images/{Category}/{Name}.png";
                      

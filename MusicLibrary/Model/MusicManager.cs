@@ -31,9 +31,9 @@ namespace MusicLibrary.Model
             List<Music> Songs = new List<Music>();
 
             DataTable AllSongDetail = GetSongDetails();
-            foreach (DataRow dr in AllSongDetail.Rows)
+            foreach (DataRow SongDeatailRow in AllSongDetail.Rows)
             {
-                Songs.Add(new Music(dr));
+                Songs.Add(new Music(SongDeatailRow));
             }
             return Songs;
         }
